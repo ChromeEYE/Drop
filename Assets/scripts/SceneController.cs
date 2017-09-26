@@ -3,12 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public static int publicId;
 
     //シーン移動
-   public void Loadscene(string SceneName)
+   public void Loadscene(int id)
     {
-        Debug.Log(SceneName);
-        SceneManager.LoadScene(SceneName); 
+        publicId = id;
+        SceneManager.LoadScene("Game"); 
     }
 
     //ゲームを終了
